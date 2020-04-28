@@ -1,0 +1,89 @@
+HighRT ?
+ExtraServers ?
+Underloaded ? 
+MoreThanOneActiveServer ?
+DimmerDecreasable ?
+DimmerIncreasable ?
+
+[
+	if Context.basicResponseTime.dref >= Constants.rtThreshold.dref || Context.optResponseTime.dref >= Constants.rtThreshold.dref
+		then
+			one HighRT
+		else
+			no HighRT
+
+	if Context.servers.dref < Context.maxServers.dref
+		then
+			one ExtraServers
+		else
+			no ExtraServers
+
+	if Context.averageUtilization.dref < 30
+		then
+			one Underloaded
+		else
+			no Underloaded
+
+	if Context.activeServers.dref > 1
+		then 
+			MoreThanOneActiveServer
+		else
+			no MoreThanOneActiveServer
+
+
+	if (1 + ( (Context.dimmer.dref + (-Constants.dimmerMargin.dref)) * (Constants.numberOfDimmerLevels.dref + (-1) ) / (100 + (-(2 * Constants.dimmerMargin.dref))))) > 1
+		then 
+			DimmerDecreasable
+		else
+			no DimmerDecreasable
+
+	if Context.dimmer.dref + Constants.dimmerStep.dref < 100
+		then
+			DimmerIncreasable
+		else
+			no DimmerIncreasable
+
+
+	if HighRT && ExtraServers
+		then
+			Adaptation1.AddServer && Adaptation1.AddServer.waitingTime = 60 && Adaptation2.DecreaseDimmer && Adaptation2.DecreaseDimmer.waitingTime = 100 && Adaptation2.DecreaseDimmer.condition = Condition_basicResponseTime_hte_75_OR_optResponseTime_hte_75
+		else
+			no Adaptation1.AddServer && no Adaptation2.DecreaseDimmer
+
+	if Underloaded && (MoreThanOneActiveServer || DimmerIncreasable)
+		then
+			if Underloaded && MoreThanOneActiveServer
+				then
+					Adaptation1.RemoveServer && Adaptation1.RemoveServer.waitingTime = 60 && Adaptation2.IncreaseDimmer && Adaptation2.IncreaseDimmer.waitingTime = 100 && Adaptation2.IncreaseDimmer.condition = Condition_averageUtilization_lt_30
+				else
+					if Underloaded && DimmerIncreasable
+						then
+							Adaptation1.IncreaseDimmer
+						else 
+							no Adaptation1.IncreaseDimmer
+		else
+			no Adaptation1.RemoveServer
+]
+
+AddServer 0..1
+RemoveServer 0..1
+IncreaseDimmer 0..1
+DecreaseDimmer 0..1
+
+
+abstract Context 1..1
+	dimmer -> integer 1..1
+	servers -> integer 1..1
+	activeServers -> integer 1..1
+	maxServers -> integer 1..1
+	totalUtilization -> integer 1..1
+	averageUtilization -> integer 1..1
+	basicResponseTime -> integer 1..1
+	optResponseTime -> integer 1..1
+
+Constants 1..1
+	dimmerMargin -> integer 1..1 = 10 // Division with 100
+	dimmerStep -> integer 1..1 = 20 // Division with 100
+	numberOfDimmerLevels -> integer 1..1 = 5
+	rtThreshold -> integer 1..1 = 75 // Division with 100
+	period -> integer 1..1 = 60
