@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_vETn4GwbEemjtfT6bIDJCA" name="cm">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_vUpxAGwbEemjtfT6bIDJCA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7CqQQGwbEemjtfT6bIDJCA" name="AddServer">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lZQooF3_Eeqrnb3Uhi9Z4w" name="waitingTime">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Q80AcF7tEeqrnb3Uhi9Z4w" name="condition">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_774XQGwbEemjtfT6bIDJCA" name="RemoveServer">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tQrQ0F3_Eeqrnb3Uhi9Z4w" name="waitingTime">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SsywUF7tEeqrnb3Uhi9Z4w" name="condition">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Cb-AIGwcEemjtfT6bIDJCA" name="IncreaseDimmer">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pjemUF3_Eeqrnb3Uhi9Z4w" name="waitingTime">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UnGg4F7tEeqrnb3Uhi9Z4w" name="condition">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dTjIAF1KEeqrnb3Uhi9Z4w" name="DecreaseDimmer">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vDbA0F3_Eeqrnb3Uhi9Z4w" name="waitingTime">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Wd64kF7tEeqrnb3Uhi9Z4w" name="condition">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>
