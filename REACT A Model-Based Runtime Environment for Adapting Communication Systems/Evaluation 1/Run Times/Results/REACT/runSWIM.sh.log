@@ -1,0 +1,361 @@
+swim
+381deac9783fea6711bbd9105cab9f87408ac8b8b2a6628a6a619e3a7a2bd92f
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=77.383484 executing removeServer()
+scheduled complete remove at 77.383484
+t=1333.440479 executing removeServer()
+scheduled complete remove at 1333.485034440737
+t=3235.820327 executing addServer()
+adding server with latency=0
+t=3235.820327 addServer() complete
+t=3275.861084 executing setDimmer(0.7)
+t=4432.258178 executing addServer()
+adding server with latency=0
+t=4432.258178 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.9 & 2 & 0.0421552489999381 & 14.5242468895301 \\
+> 
+> 
+swim
+8ce38e61632ff5b7504227cc54503d063e5117523b5d495ca8ce3b00aee1927b
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.760185 executing removeServer()
+scheduled complete remove at 76.760185
+t=1333.228159 executing removeServer()
+scheduled complete remove at 1333.228159
+t=3235.526572 executing addServer()
+adding server with latency=0
+t=3235.526572 addServer() complete
+t=3275.49174 executing setDimmer(0.7)
+t=4431.879027 executing addServer()
+adding server with latency=0
+t=4431.879027 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 47 & 2 & 0.0421731172602454 & 14.5351988563379 \\
+> 
+> 
+swim
+64fb89ce2c9505946721598e3665a31cefbff9c744c41a56a503da007e4cca7c
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.160427 executing removeServer()
+scheduled complete remove at 76.160427
+t=1272.555646 executing removeServer()
+scheduled complete remove at 1272.593908965324
+t=3234.931565 executing addServer()
+adding server with latency=0
+t=3234.931565 addServer() complete
+t=3274.879332 executing setDimmer(0.7)
+t=4431.351094 executing addServer()
+adding server with latency=0
+t=4431.351094 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.8 & 2 & 0.042146383046472 & 14.5350360230384 \\
+> 
+> 
+swim
+3fb9ecceb48c1799e6d87cc506f145c5208c24cb14341b142db9a2d11f31bf64
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.745694 executing removeServer()
+scheduled complete remove at 76.745694
+t=1333.225663 executing removeServer()
+scheduled complete remove at 1333.225663
+t=3235.477479 executing addServer()
+adding server with latency=0
+t=3235.477479 addServer() complete
+t=3275.540001 executing setDimmer(0.7)
+t=4431.92961 executing addServer()
+adding server with latency=0
+t=4431.92961 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.8 & 2 & 0.0421822954178771 & 14.5248588114651 \\
+> 
+> 
+swim
+50675dfae7c645ae8644b6933ccdd2e0ad4d1a51e855838289fadeda5fa22374
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.082629 executing removeServer()
+scheduled complete remove at 76.082629
+t=1272.422689 executing removeServer()
+scheduled complete remove at 1272.422689
+t=3234.81605 executing addServer()
+adding server with latency=0
+t=3234.81605 addServer() complete
+t=3274.85851 executing setDimmer(0.7)
+t=4431.202858 executing addServer()
+adding server with latency=0
+t=4431.202858 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.8 & 2 & 0.0421575197347722 & 14.5350360230384 \\
+> 
+> 
+swim
+5e09395e6f73da6934f0f98970e99b09dcde9e9a7a7f34135c824b32c58be403
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.547894 executing removeServer()
+scheduled complete remove at 76.547894
+t=1333.005022 executing removeServer()
+scheduled complete remove at 1333.005022
+t=3235.252034 executing addServer()
+adding server with latency=0
+t=3235.252034 addServer() complete
+t=3275.253807 executing setDimmer(0.7)
+t=4431.555667 executing addServer()
+adding server with latency=0
+t=4431.555667 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.9 & 2 & 0.0421022729683999 & 14.5242468895301 \\
+> 
+> 
+swim
+949e82afccb21a8fae4761e297d2951227ca06e0ef9e1d4ecded9a3c717c2e9d
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.696022 executing removeServer()
+scheduled complete remove at 76.696022
+t=1333.207463 executing removeServer()
+scheduled complete remove at 1333.207463
+t=3235.570956 executing addServer()
+adding server with latency=0
+t=3235.570956 addServer() complete
+t=3275.539563 executing setDimmer(0.7)
+t=4431.882391 executing addServer()
+adding server with latency=0
+t=4431.882391 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 47 & 2 & 0.0422126484833803 & 14.5351988563379 \\
+> 
+> 
+swim
+8b6768cb795780d3007553ec1aac60a1e4ad36a3d09e6a729ef9b1f7be6bb552
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.059924 executing removeServer()
+scheduled complete remove at 76.059924
+t=1272.505583 executing removeServer()
+scheduled complete remove at 1272.505583
+t=3234.797196 executing addServer()
+adding server with latency=0
+t=3234.797196 addServer() complete
+t=3274.85388 executing setDimmer(0.7)
+t=4431.321554 executing addServer()
+adding server with latency=0
+t=4431.321554 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.8 & 2 & 0.0421000371653601 & 14.491654634853 \\
+> 
+> 
+swim
+234fd313c3d5fc80a2ab62428f079c9424dd5fbdce7b0d6f8a714d847c844a91
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=76.558879 executing removeServer()
+scheduled complete remove at 76.558879
+t=1333.116849 executing removeServer()
+scheduled complete remove at 1333.116849
+t=3235.402413 executing addServer()
+adding server with latency=0
+t=3235.402413 addServer() complete
+t=3275.396811 executing setDimmer(0.7)
+t=4431.765292 executing addServer()
+adding server with latency=0
+t=4431.765292 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 47 & 2 & 0.0421986616585947 & 14.5351988563379 \\
+> 
+> 
+swim
+9f6c767d04235456b4474997b7bb0f7c7379fdb0015212a5a90395d9f04d8b0a
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=75.997263 executing removeServer()
+scheduled complete remove at 75.997263
+t=1272.474513 executing removeServer()
+scheduled complete remove at 1272.474513
+t=3234.777916 executing addServer()
+adding server with latency=0
+t=3234.777916 addServer() complete
+t=3274.787001 executing setDimmer(0.7)
+t=4431.133171000001 executing addServer()
+adding server with latency=0
+t=4431.133171000001 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 868 & 74.5 & 46.8 & 2 & 0.0421000371653601 & 14.491654634853 \\
+> 
+> 
+swim

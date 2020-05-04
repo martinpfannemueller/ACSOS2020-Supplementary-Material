@@ -4,7 +4,7 @@ This folder contains the files used for creating die SLOC numbers. [cloc](https:
 
 ## Reproducing the results
 
-For the following you need to install cloc according to the instruction in the [repository](https://github.com/AlDanial/cloc).
+For the following you need to install cloc according to the instructions in the [repository](https://github.com/AlDanial/cloc).
 
 
 ### Rainbow

@@ -1,0 +1,371 @@
+6a29fc42681aa24f29f66879036d420e634bad358cdb3369ebdb735a22ab07e6
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.110666 executing removeServer()
+scheduled complete remove at 63.110666
+t=1323.10519 executing removeServer()
+scheduled complete remove at 1323.10519
+t=3243.114749 executing addServer()
+adding server with latency=0
+t=3243.114749 addServer() complete
+t=3303.984024 executing setDimmer(0.7)
+t=4443.102577 executing addServer()
+adding server with latency=0
+t=4443.102577 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47.1 & 2 & 0.0425692618878193 & 14.5151936353676 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+1174ed0ab92b4145f0938805107acf8c826cffc925cc7c4c4c61a7f04558a4c0
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.161523 executing removeServer()
+scheduled complete remove at 63.214029937054
+t=1323.141004 executing removeServer()
+scheduled complete remove at 1323.141004
+t=3243.160535 executing addServer()
+adding server with latency=0
+t=3243.160535 addServer() complete
+t=3304.12897 executing setDimmer(0.7)
+t=4443.144543000001 executing addServer()
+adding server with latency=0
+t=4443.144543000001 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47 & 2 & 0.0424554490650355 & 14.5334356448941 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+54e8018fd8f8665377c39e52d66c13008380a27a9d8bb14d92a0eb9f07c53a66
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.192431 executing removeServer()
+scheduled complete remove at 63.214029937054
+t=1323.152884 executing removeServer()
+scheduled complete remove at 1323.152884
+t=3243.170006 executing addServer()
+adding server with latency=0
+t=3243.170006 addServer() complete
+t=3304.338862 executing setDimmer(0.7)
+t=4443.161705000001 executing addServer()
+adding server with latency=0
+t=4443.161705000001 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47 & 2 & 0.0424554490650355 & 14.5334356448941 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+0d6a86bde069d2c77b9b4e8df2a5881698692b796d9385c726a0a04061186843
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.171709 executing removeServer()
+scheduled complete remove at 63.214029937054
+t=1323.163633 executing removeServer()
+scheduled complete remove at 1323.163633
+t=3243.161621 executing addServer()
+adding server with latency=0
+t=3243.161621 addServer() complete
+t=3304.236453 executing setDimmer(0.7)
+t=4443.15183 executing addServer()
+adding server with latency=0
+t=4443.15183 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47 & 2 & 0.0424554490650355 & 14.5334356448941 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+78446e7caa28bcba4706e37d96e56ceebc510a294f122fcfdabdae36dbb2acac
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.195748 executing removeServer()
+scheduled complete remove at 63.214029937054
+t=1323.181281 executing removeServer()
+scheduled complete remove at 1323.181281
+t=3243.176912 executing addServer()
+adding server with latency=0
+t=3243.176912 addServer() complete
+t=3304.246607 executing setDimmer(0.7)
+t=4443.175534 executing addServer()
+adding server with latency=0
+t=4443.175534 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47 & 2 & 0.0424554490650355 & 14.5334356448941 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+27e7a7125aab7579217ac391bf05df4e0d9603ebab93155c3b85629b0c2c85f8
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.222191 executing removeServer()
+scheduled complete remove at 63.222191
+t=1323.206005 executing removeServer()
+scheduled complete remove at 1323.206005
+t=3243.192774 executing addServer()
+adding server with latency=0
+t=3243.192774 addServer() complete
+t=3304.165423 executing setDimmer(0.7)
+t=4443.200186 executing addServer()
+adding server with latency=0
+t=4443.200186 addServer() complete
+t=4493.825538 executing setDimmer(0.5)
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 2049 & 60.4 & 10 & 2 & 0.00575062643949958 & 13.3355702829302 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+cb454057ee5edf2cead2a8a26f8a15a302f605cc19f72a293e0cc369301ab8be
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.226993 executing removeServer()
+scheduled complete remove at 63.226993
+t=1323.221203 executing removeServer()
+scheduled complete remove at 1323.221203
+t=3243.228213 executing addServer()
+adding server with latency=0
+t=3243.228213 addServer() complete
+t=3304.201502 executing setDimmer(0.7)
+t=4443.237101 executing addServer()
+adding server with latency=0
+t=4443.237101 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47.1 & 2 & 0.0424967592515637 & 14.5151936353676 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+4dbe5172adfb1f6d2ed04fb5903b1b61ff5558c19b9bdc4dccbc72c414d4cac1
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.235694 executing removeServer()
+scheduled complete remove at 63.235694
+t=1323.2085 executing removeServer()
+scheduled complete remove at 1323.2085
+t=3243.237066 executing addServer()
+adding server with latency=0
+t=3243.237066 addServer() complete
+t=3304.193503 executing setDimmer(0.7)
+t=4443.228625 executing addServer()
+adding server with latency=0
+t=4443.228625 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47.1 & 2 & 0.0424967592515637 & 14.5151936353676 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+d2389f25cb13c1ba756cff1b0a4a29aa34d825fc0ffaea7ed08a322288b7892a
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.242032 executing removeServer()
+scheduled complete remove at 63.242032
+t=1323.200948 executing removeServer()
+scheduled complete remove at 1323.200948
+t=3243.215493 executing addServer()
+adding server with latency=0
+t=3243.215493 addServer() complete
+t=3304.086243 executing setDimmer(0.7)
+t=4443.203218 executing addServer()
+adding server with latency=0
+t=4443.203218 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47.1 & 2 & 0.0424967592515637 & 14.5151936353676 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
+2eb9a915186da6cab4ad1de028d3cf09b3cf1426862319db51b7926f030ae11a
+sim run 0: $trace="traces/wc_day53-r0-105m-l70.delta", $latency=0, $repetition=0
+t=0 addServer() complete
+t=0 addServer() complete
+t=0 addServer() complete
+t=63.264502 executing removeServer()
+scheduled complete remove at 63.264502
+t=1323.253044 executing removeServer()
+scheduled complete remove at 1323.253044
+t=3243.263994 executing addServer()
+adding server with latency=0
+t=3243.263994 addServer() complete
+t=3304.340781 executing setDimmer(0.7)
+t=4443.252360000001 executing addServer()
+adding server with latency=0
+t=4443.252360000001 addServer() complete
+> source('../swim/tools/plotResults.R'); plotResults('sim', 'SWIM', run=0, saveAs='plot.pdf')
+Loading required package: reshape2
+Loading required package: ggplot2
+Loading required package: cowplot
+
+Attaching package: ‘cowplot’
+
+The following object is masked from ‘package:ggplot2’:
+
+    ggsave
+
+Loading required package: scales
+Loading required package: RSQLite
+Loading required package: DBI
+Computing utility with periodUtilitySEAMS2017A 
+Config & Utility & \% optional & \% late & avg. servers & avg. error & overshoot\\
+ sim & 675 & 74.6 & 47 & 2 & 0.0425221696843245 & 14.5334356448941 \\
+> 
+> 
+Error: No such container:path: rainbow:/headless/seams-swim/swim/simulations/swim/swim-console.out
+rainbow
