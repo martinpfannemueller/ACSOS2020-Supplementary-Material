@@ -9,7 +9,7 @@ This folder contains the raw results of the run time evaluation in the `Results`
 1. For building the ZeroC Ice Python package dependency you need gcc and some development headers. On Ubuntu you need to run `sudo apt-get install build-essential libssl-dev libbz2-dev`
 1. Install ZeroC Ice and Zeroconf Python dependencies: `pip install -r swim-interface/requirements.txt`
 2. Clone Rainbow: `git clone https://github.com/cmu-able/rainbow.git`
-3. Replace `gabrielmoreno/swim:1.0` with `gabrielmoreno/swim:1.1` as this contains a fixed version of SWIM in `deployments/rainbow-example/Dockerfile`
+3. Replace `gabrielmoreno/swim:1.0` with `gabrielmoreno/swim:1.0.1` as this contains a fixed version of SWIM in `deployments/rainbow-example/Dockerfile`
 4. Run `docker build -t rainbow-build .` inside the `rainbow` folder
 5. Run `docker build -t cmuable/rainbow-example -f deployments/rainbow-example/Dockerfile .` inside the `rainbow` folder
 
