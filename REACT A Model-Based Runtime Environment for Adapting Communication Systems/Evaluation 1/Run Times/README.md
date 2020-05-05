@@ -1,12 +1,13 @@
 # Evaluation 1 - Run Times
 
-This folder contains the raw results of the run time evaluation in the `Results` folder. Additionally, it contains the shell scripts for executing the evaluation, the `configs` folder with the configuration files, the AOS as well as the TSS for the SWIM case, and the Python-based interfaces including the generated IDL bindings in the folder `swim-interface`. You need to use Python 3 for this evaluation.
+This folder contains the raw results of the run time evaluation in the `Results` folder. Additionally, it contains the shell scripts for executing the evaluation, the `configs` folder with the configuration files, the AOS as well as the TSS for the SWIM case, and the Python-based interfaces including the generated IDL bindings in the folder `swim-interface`. You need to use Python 3 for this evaluation. Ubuntu typically still uses Python 2 when running `python` and `pip`. In this case you need to uses `python3` and `pip3`.
 
 ## Reproducing the results
 
 ### Setup
 
-1. `pip install -r swim-interface/requirements.txt`
+1. For building the ZeroC Ice Python package dependency you need gcc and some development headers. On Ubuntu you need to run `sudo apt-get install build-essential libssl-dev libbz2-dev`
+1. Install ZeroC Ice and Zeroconf Python dependencies: `pip install -r swim-interface/requirements.txt`
 2. Clone Rainbow: `git clone https://github.com/cmu-able/rainbow.git`
 3. Replace `gabrielmoreno/swim:1.0` with `gabrielmoreno/swim:1.1` as this contains a fixed version of SWIM in `deployments/rainbow-example/Dockerfile`
 4. Run `docker build -t rainbow-build .` inside the `rainbow` folder
