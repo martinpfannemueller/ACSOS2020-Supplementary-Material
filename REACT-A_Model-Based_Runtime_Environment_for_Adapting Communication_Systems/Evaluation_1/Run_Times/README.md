@@ -12,6 +12,7 @@ This folder contains the raw results of the run time evaluation in the `Results`
 3. Replace `gabrielmoreno/swim:1.0` with `gabrielmoreno/swim:1.0.1` as this contains a fixed version of SWIM in `deployments/rainbow-example/Dockerfile`
 4. Run `docker build -t rainbow-build .` inside the `rainbow` folder
 5. Run `docker build -t cmuable/rainbow-example -f deployments/rainbow-example/Dockerfile .` inside the `rainbow` folder
+6. Make sure that all shell scripts are executable: `chmod +x *.sh`
 
 ### Executing
 
