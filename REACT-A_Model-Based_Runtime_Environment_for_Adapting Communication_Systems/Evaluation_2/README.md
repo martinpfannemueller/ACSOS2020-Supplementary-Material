@@ -7,7 +7,7 @@ The SDN evaluation has been conducted on four cloud machines:
 * Host3 (PK, 10.0.1.2): 2 VCPUs, 8GB RAM
 * Host4 (Mininet Wifi, 10.0.1.5): 8 VCPUs, 16GB RAM
 
-A private network in the network 10.0.1.0/24 was used. The network topology looked like this:
+The machines ran in the network 10.0.1.0/24. The network topology looked like this:
 
 ```
 Host1 (10.0.1.3)+                  +Host3 (10.0.1.2)
