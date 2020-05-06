@@ -1,0 +1,66 @@
+abstract Host
+    mac -> MacAddr
+    ipAddress -> IpAddr
+    port -> integer
+
+abstract Switch
+    switchId -> SwitchId
+
+abstract DestinationHost
+    [ all disj f1;f2:flowRules | f1.outPort != f2.outPort && f1.inPort != f2.inPort && f1.inPort = f2.outPort && f1.srcMac != f2.srcMac && f1.dstMac != f2.dstMac && f1.srcMac = f2.dstMac && f1.srcIP != f2.srcIP && f1.dstIP != f2.dstIP && f1.srcIP = f2.dstIP  ]
+    [ all disj df1;df2:duplicationFlowRules | df1.outPort != df2.outPort && df1.inPort != df2.inPort && df1.inPort = df2.outPort && df1.srcMac != df2.srcMac && df1.dstMac != df2.dstMac && df1.srcMac = df2.dstMac && df1.srcIP != df2.srcIP && df1.dstIP != df2.dstIP && df1.srcIP = df2.dstIP  ]
+    [ distance.dref <= 20 => no duplicationFlowRules ]
+    [ distance.dref > 20 => # duplicationFlowRules = 2 ]
+    mac -> MacAddr
+    ipAddress -> IpAddr
+    port -> integer
+    flowRules -> FlowRule 2
+    duplicationFlowRules -> DuplicationFlowRule 0..2
+    distance -> integer ?
+
+abstract MacAddr
+abstract IpAddr
+abstract SwitchId
+
+FlowRule *
+    [ this in DestinationHost.flowRules ]
+    [ this.switchId = Switch.switchId ]
+    [ this.inPort != this.outPort ]
+    [ this.inPort = Host.port || this.inPort = DestinationHost.port]
+    [ this.outPort = DestinationHost.port || this.outPort = Host.port]
+    [ this.srcMac != this.dstMac ]
+    [ this.srcMac = Host.mac || this.srcMac = DestinationHost.mac ]
+    [ this.dstMac = DestinationHost.mac || this.dstMac = Host.mac ]
+    [ this.srcIP != this.dstIP ]
+    [ this.srcIP = Host.ipAddress || this.srcIP = DestinationHost.ipAddress ]
+    [ this.dstIP = DestinationHost.ipAddress || this.dstIP = Host.ipAddress ]
+    [ (this.srcIP = DestinationHost.ipAddress && this.srcMac = DestinationHost.mac && this.inPort = DestinationHost.port) || (this.dstIP = DestinationHost.ipAddress && this.dstMac = DestinationHost.mac && this.outPort = DestinationHost.port) ]
+    switchId -> SwitchId
+    inPort -> integer
+    outPort -> integer
+    srcMac -> MacAddr
+    dstMac -> MacAddr
+    srcIP -> IpAddr
+    dstIP -> IpAddr
+
+DuplicationFlowRule *
+    [ this in DestinationHost.duplicationFlowRules]
+    [ this.switchId = Switch.switchId ]
+    [ this.inPort != this.outPort ]
+    [ this.inPort = Host.port || this.inPort = DestinationHost.port + 1]
+    [ this.outPort = DestinationHost.port + 1 || this.outPort = Host.port]
+    [ this.srcMac != this.dstMac ]
+    [ this.srcMac = Host.mac || this.srcMac = DestinationHost.mac ]
+    [ this.dstMac = DestinationHost.mac || this.dstMac = Host.mac ]
+    [ this.srcIP != this.dstIP ]
+    [ this.srcIP = Host.ipAddress || this.srcIP = DestinationHost.ipAddress ]
+    [ this.dstIP = DestinationHost.ipAddress || this.dstIP = Host.ipAddress ]
+    [ (this.srcIP = DestinationHost.ipAddress && this.srcMac = DestinationHost.mac && this.inPort = DestinationHost.port + 1) || (this.dstIP = DestinationHost.ipAddress && this.dstMac = DestinationHost.mac && this.outPort = DestinationHost.port + 1) ]
+    switchId -> SwitchId
+    inPort -> integer
+    outPort -> integer
+    srcMac -> MacAddr
+    dstMac -> MacAddr
+    srcIP -> IpAddr
+    dstIP -> IpAddr
+
