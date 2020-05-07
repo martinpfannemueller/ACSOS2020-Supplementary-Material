@@ -1,6 +1,6 @@
-# REACT Supplementary Material
+# ACSOS 2020 Supplementary Material
 
-This repository contains supplementary material for the ACSOS 2020 full paper and demo submissions presenting REACT (**R**untime **E**nvironment for **A**dapting **C**ommunication Sys**T**ems).
+This repository contains supplementary material for the ACSOS 2020 full paper ("REACT: A Model-Based Runtime Environment for Adapting Communication Systems") and demo ("Enhancing a Communication System with Adaptive Behavior using REACT") submissions presenting **REACT** (**R**untime **E**nvironment for **A**dapting **C**ommunication Sys**T**ems).
 
 ![Architecture](architecture.png)
 
