@@ -11,13 +11,6 @@ import re
 skips = 0
 current_dimmer_value = 0
 
-def get_constants(prefix):
-    return {
-        getattr(socket, n): n
-        for n in dir(socket)
-        if n.startswith(prefix)
-    }
-
 def sendCommand(c):
     c = c.encode()
     sock.sendall(c)
@@ -154,7 +147,6 @@ class ManagedResource(Manta.Effecting.ManagedResource):
                     _thread.start_new_thread(wait_and_run, (addServer, waitingTime))
                 elif className == 'SetDimmer':
                     dimmerValue = int(component.parameters[0].value) / 100
-                    setDimmer(dimmerValue)
                     _thread.start_new_thread(wait_and_run, (setDimmer, waitingTime, dimmerValue, condition))
                 elif className == 'IncreaseDimmer':
                     dimmerValue = current_dimmer_value+0.2

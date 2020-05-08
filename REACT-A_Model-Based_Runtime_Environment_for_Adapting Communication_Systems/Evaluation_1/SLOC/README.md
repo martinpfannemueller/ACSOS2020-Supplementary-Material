@@ -108,10 +108,10 @@ cloc --force-lang-def=cloc_language_definitions REACT/SWIM_Interface.py
        1 unique file.
        0 files ignored.
 
-github.com/AlDanial/cloc v 1.84  T=0.01 s (75.3 files/s, 19572.5 lines/s)
+github.com/AlDanial/cloc v 1.84  T=0.02 s (59.5 files/s, 15005.2 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Python                           1             51              2            207
+Python                           1             50              2            200
 -------------------------------------------------------------------------------
 ```
