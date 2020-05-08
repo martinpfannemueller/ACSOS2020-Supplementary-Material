@@ -24,7 +24,7 @@ Execute `runRainbow.sh > runRainbow.log`
 
 #### REACT
 
-1. In a first shell: `docker run --rm -it --name react --volume ${PWD}/configs:/usr/src/configs --network="host" wi2bc11.bwl.uni-mannheim.de:18443/react`
+1. In a first shell: `docker run --rm -it --name react --volume "${PWD}/configs:/usr/src/configs" --network="host" wi2bc11.bwl.uni-mannheim.de:18443/react`
 2. In a second shell: `python swim-interface/SWIM.py > SWIM.py.log` (this should be Python 3)
 3. In a third shell: `./runSWIM.sh > runSWIM.sh.log`
 4. When you are finished, fetch the REACT log from Docker by executing `docker logs react > REACT.log`
