@@ -224,9 +224,6 @@ class Effector(Manta.Effecting.ManagedResource):
                     self.socketManager.removeServer()
                 elif className == 'ServerLauncher':
                     self.socketManager.addServer()
-                elif className == 'Attributes':
-                    dimmerValue = int(component.parameters[0].value) / 100
-                    self.socketManager.setDimmer(dimmerValue)
 
 
 if __name__ == '__main__':
@@ -236,16 +233,24 @@ if __name__ == '__main__':
 
     managerSensor = ManagerSensor(socketManager)
 
-    serverSensor1 = ServerSensor(socketManager, 1) # Sensor of Server 1
+    serverSensor1 = ServerSensor(socketManager, 1)  # Sensor of Server 1
+    serverSensor2 = ServerSensor(socketManager, 2)  # Sensor of Server 2
+    serverSensor3 = ServerSensor(socketManager, 3)  # Sensor of Server 3
 
     effectorThread = threading.Thread(target=effector.start)
     managerSensorThread = threading.Thread(target=managerSensor.start)
     serverSensor1Thread = threading.Thread(target=serverSensor1.start)
+    serverSensor2Thread = threading.Thread(target=serverSensor2.start)
+    serverSensor3Thread = threading.Thread(target=serverSensor3.start)
 
     effectorThread.start()
     managerSensorThread.start()
     serverSensor1Thread.start()
+    serverSensor2Thread.start()
+    serverSensor3Thread.start()
 
     effectorThread.join()
     managerSensorThread.join()
     serverSensor1Thread.join()
+    serverSensor2Thread.join()
+    serverSensor3Thread.join()
