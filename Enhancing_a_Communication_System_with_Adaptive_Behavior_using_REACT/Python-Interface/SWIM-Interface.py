@@ -107,6 +107,7 @@ class ManagerSensor:
         self.sensorPort = 10001
 
     def start(self):
+        print("ManagerSensor started")
         while True:
             try:
                 proxy_string = self.sensorName + ":default -h " + self.sensorHost + " -p " + str(self.sensorPort)
@@ -120,30 +121,26 @@ class ManagerSensor:
 
         while True:
             try:
-                try:
-                    activeServers = self.socketManager.getActiveServers()
-                    maxServers = self.socketManager.getMaxServers()
-                    responseTime = int(round(self.socketManager.getAverageResponseTime()*100, 2))
-                    data = {
-                        "Mngr": {
-                            "type": "Manager",
-                            "activeServers": activeServers,
-                            "maxServers": maxServers,
-                            "responseTime": responseTime
-                        }
+                activeServers = self.socketManager.getActiveServers()
+                maxServers = self.socketManager.getMaxServers()
+                responseTime = int(round(self.socketManager.getAverageResponseTime() * 100, 2))
+                data = {
+                    "Mngr": {
+                        "type": "Manager",
+                        "activeServers": activeServers,
+                        "maxServers": maxServers,
+                        "responseTime": responseTime
                     }
+                }
+                print(data)
+                self.sensor.receiveSensorData(json.dumps(data))
+            except Exception as e:
+                print(e)
+                print("Error fetching data. Continue...")
+                continue
 
-                    print(data)
-                    self.sensor.receiveSensorData(json.dumps(data))
-                except Exception as e:
-                    print(e)
-                    print("Error fetching data. Restart...")
-                    break
-
-                print("Waiting", self.interval)
-                time.sleep(self.interval)
-            except ValueError as e:
-                break
+            print("Waiting", self.interval)
+            time.sleep(self.interval)
 
 
 class ServerSensor:
@@ -159,6 +156,7 @@ class ServerSensor:
         self.server_id = server_id
 
     def start(self):
+        print("ServerSensor for server " + str(self.server_id) + " started")
         while True:
             try:
                 proxy_string = self.sensorName + ":default -h " + self.sensorHost + " -p " + str(self.sensorPort)
@@ -173,26 +171,22 @@ class ServerSensor:
         while True:
             arred = lambda x, n: x * (10 ** n) // 1 / (10 ** n)  # Function for limiting a float to two decimal places
             try:
-                try:
-                    utilization = int(arred(self.socketManager.getUtilization(self.server_id), 2) * 100)
-                    data = {
-                        "Srv" + str(self.server_id) : {
-                            "type": "Server",
-                            "utilization": utilization
-                        }
+                utilization = int(arred(self.socketManager.getUtilization(self.server_id), 2) * 100)
+                data = {
+                    "Srv" + str(self.server_id): {
+                        "type": "Server",
+                        "utilization": utilization
                     }
+                }
 
-                    print(data)
-                    self.sensor.receiveSensorData(json.dumps(data))
+                print(data)
+                self.sensor.receiveSensorData(json.dumps(data))
 
-                    print("Waiting", self.interval)
-                    time.sleep(self.interval)
-                except Exception as e:
-                    print(e)
-                    print("Error fetching data. Restart...")
-                    break
-            except ValueError as e:
-                break
+                print("Waiting", self.interval)
+                time.sleep(self.interval)
+            except Exception as e:
+                # Happens e.g. when a server has been removed
+                continue
 
 
 class Effector(Manta.Effecting.ManagedResource):
