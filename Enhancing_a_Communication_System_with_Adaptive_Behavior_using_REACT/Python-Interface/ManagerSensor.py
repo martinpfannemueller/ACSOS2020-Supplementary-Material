@@ -10,6 +10,9 @@ class ManagerSensor:
     interval = 15
 
     def __init__(self):
+        self.sensorName = "Sensor-1"
+        self.sensorHost = "127.0.0.1"
+        self.sensorPort = 10001
 
         while True:
             try:
@@ -21,7 +24,7 @@ class ManagerSensor:
                 continue
             break
 
-        with Ice.initialize as communicator:
+        with Ice.initialize() as communicator:
             while True:
                 try:
                     proxy_string = self.sensorName + ":default -h " + self.sensorHost + " -p " + str(self.sensorPort)
@@ -62,8 +65,8 @@ class ManagerSensor:
 
     def sendCommand(self, command):
         command = command.encode()
-        socket.sendall(command)
-        data = socket.recv(4096)
+        self.socket.sendall(command)
+        data = self.socket.recv(4096)
         data = data.decode()
         data = data.strip()
         return data
@@ -76,6 +79,9 @@ class ManagerSensor:
 
     def getBasicThroughput(self):
         return float(self.sendCommand('get_basic_throughput\n'))
+
+    def getDimmer(self):
+        return float(self.sendCommand('get_dimmer\n'))
 
 
 if __name__ == '__main__':
