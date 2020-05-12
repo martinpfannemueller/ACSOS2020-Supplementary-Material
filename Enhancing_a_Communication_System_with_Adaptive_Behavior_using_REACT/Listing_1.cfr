@@ -8,48 +8,19 @@ Status 1..1
 	sumUtilization -> integer 1..1
 	averageUtilization -> integer 1..1
 
-[	
-	if Manager.responseTime >= 75
-		then
-			one HighRT
-		else
-			no HighRT
-
-	if Manager.activeServers < Manager.maxServers
-		then
-			one ExtraServers
-		else
-			no ExtraServers
-
-	if Status.averageUtilization.dref < 30
-		then
-			one Underloaded
-		else
-			no Underloaded
-
-	if HighRT && ExtraServers
-		then
-			one ServerLauncher
-		else
-			no ServerLauncher
-
-	if Underloaded && activeServers > 1
-		then
-			one ServerRemover
-		else
-			no ServerRemover
-]
-
+[ if Manager.responseTime >= 75 then one HighRT else no HighRT
+  if Manager.activeServers < Manager.maxServers then one ExtraServers else no ExtraServers
+  if Status.averageUtilization.dref < 30 then one Underloaded else no Underloaded
+  if HighRT && ExtraServers then one ServerLauncher else no ServerLauncher
+  if Underloaded && activeServers > 1 then one ServerRemover else no ServerRemover ]
 
 ServerRemover 0..1
 	[ no ServerLauncher ]
-
 ServerLauncher 0..1
 	[ no ServerRemover ]
 
 abstract Server
 	utilization -> integer 1..1
-
 abstract Manager
 	activeServers -> integer 1..1
 	maxServers -> integer 1..1
