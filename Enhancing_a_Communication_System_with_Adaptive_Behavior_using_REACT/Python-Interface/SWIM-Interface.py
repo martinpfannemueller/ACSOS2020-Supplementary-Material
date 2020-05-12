@@ -95,7 +95,8 @@ class SocketManager():
 
     # Effector
 
-class ManagerSensor:
+
+class Sensor:
 
     interval = 15
     communicator = Ice.initialize()
@@ -107,56 +108,7 @@ class ManagerSensor:
         self.sensorPort = 10001
 
     def start(self):
-        print("ManagerSensor started")
-        while True:
-            try:
-                proxy_string = self.sensorName + ":default -h " + self.sensorHost + " -p " + str(self.sensorPort)
-                base = self.communicator.stringToProxy(proxy_string)
-                self.sensor = Manta.Sensing.ISensorPrx.checkedCast(base)
-                break
-            except Exception as exception:
-                print("SensorProxy not ready")
-                time.sleep(1)
-                continue
-
-        while True:
-            try:
-                activeServers = self.socketManager.getActiveServers()
-                maxServers = self.socketManager.getMaxServers()
-                responseTime = int(round(self.socketManager.getAverageResponseTime() * 100, 2))
-                data = {
-                    "Mngr": {
-                        "type": "Manager",
-                        "activeServers": activeServers,
-                        "maxServers": maxServers,
-                        "responseTime": responseTime
-                    }
-                }
-                print(data)
-                self.sensor.receiveSensorData(json.dumps(data))
-            except Exception as e:
-                print(e)
-                print("Error fetching data. Continue...")
-                continue
-
-            print("Waiting", self.interval)
-            time.sleep(self.interval)
-
-
-class ServerSensor:
-
-    interval = 15
-    communicator = Ice.initialize()
-
-    def __init__(self, socket_manager, server_id):
-        self.socketManager = socket_manager
-        self.sensorName = "Sensor-1"
-        self.sensorHost = self.socketManager.host
-        self.sensorPort = 10001
-        self.server_id = server_id
-
-    def start(self):
-        print("ServerSensor for server " + str(self.server_id) + " started")
+        print("Sensor started")
         while True:
             try:
                 proxy_string = self.sensorName + ":default -h " + self.sensorHost + " -p " + str(self.sensorPort)
@@ -170,23 +122,34 @@ class ServerSensor:
 
         while True:
             arred = lambda x, n: x * (10 ** n) // 1 / (10 ** n)  # Function for limiting a float to two decimal places
-            try:
-                utilization = int(arred(self.socketManager.getUtilization(self.server_id), 2) * 100)
-                data = {
-                    "Srv" + str(self.server_id): {
+            data = {}
+            for i in range(1, 4):  # Simulated use case has a maximum of three servers
+                try:
+                    utilization = int(arred(self.socketManager.getUtilization(i), 2) * 100)
+                    data['Srv'+str(i)] = {
                         "type": "Server",
                         "utilization": utilization
                     }
-                }
+                except Exception as e:
+                    # Happens e.g. when a server has been removed
+                    continue
 
-                print(data)
-                self.sensor.receiveSensorData(json.dumps(data))
+            activeServers = self.socketManager.getActiveServers()
+            maxServers = self.socketManager.getMaxServers()
+            responseTime = int(round(self.socketManager.getAverageResponseTime() * 100, 2))
 
-                print("Waiting", self.interval)
-                time.sleep(self.interval)
-            except Exception as e:
-                # Happens e.g. when a server has been removed
-                continue
+            data["Mngr"] = {
+                "type": "Manager",
+                "activeServers": activeServers,
+                "maxServers": maxServers,
+                "responseTime": responseTime
+            }
+
+            print(data)
+            self.sensor.receiveSensorData(json.dumps(data))
+
+            print("Waiting", self.interval)
+            time.sleep(self.interval)
 
 
 class Effector(Manta.Effecting.ManagedResource):
@@ -209,42 +172,27 @@ class Effector(Manta.Effecting.ManagedResource):
         return
 
     def sendComponentChanges(self, components, current):
-        if len(components.components) > 0:
-            for component in components.components:
-                className = component.className
-                print(component)
+        for component in components.components:
+            className = component.className
+            print(component)
 
-                if className == 'ServerRemover':
-                    self.socketManager.removeServer()
-                elif className == 'ServerLauncher':
-                    self.socketManager.addServer()
+            if className == 'ServerRemover':
+                self.socketManager.removeServer()
+            elif className == 'ServerLauncher':
+                self.socketManager.addServer()
 
 
 if __name__ == '__main__':
     socketManager = SocketManager("172.16.191.129")
 
     effector = Effector(socketManager)
-
-    managerSensor = ManagerSensor(socketManager)
-
-    serverSensor1 = ServerSensor(socketManager, 1)  # Sensor of Server 1
-    serverSensor2 = ServerSensor(socketManager, 2)  # Sensor of Server 2
-    serverSensor3 = ServerSensor(socketManager, 3)  # Sensor of Server 3
+    sensor = Sensor(socketManager)
 
     effectorThread = threading.Thread(target=effector.start)
-    managerSensorThread = threading.Thread(target=managerSensor.start)
-    serverSensor1Thread = threading.Thread(target=serverSensor1.start)
-    serverSensor2Thread = threading.Thread(target=serverSensor2.start)
-    serverSensor3Thread = threading.Thread(target=serverSensor3.start)
+    sensorThread = threading.Thread(target=sensor.start)
 
     effectorThread.start()
-    managerSensorThread.start()
-    serverSensor1Thread.start()
-    serverSensor2Thread.start()
-    serverSensor3Thread.start()
+    sensorThread.start()
 
     effectorThread.join()
-    managerSensorThread.join()
-    serverSensor1Thread.join()
-    serverSensor2Thread.join()
-    serverSensor3Thread.join()
+    sensorThread.join()
