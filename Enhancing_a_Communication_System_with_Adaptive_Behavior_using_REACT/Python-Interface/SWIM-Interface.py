@@ -183,7 +183,7 @@ class Effector(Manta.Effecting.ManagedResource):
 
 
 if __name__ == '__main__':
-    socketManager = SocketManager("172.16.191.129")
+    socketManager = SocketManager("127.0.0.1")
 
     effector = Effector(socketManager)
     sensor = Sensor(socketManager)
