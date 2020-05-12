@@ -21,7 +21,7 @@ Status 1..1
 		else
 			no ExtraServers
 
-	if Status.averageUtilization.dref < 30 && Status.averageUtilization != 0
+	if Status.averageUtilization < 30 && Status.averageUtilization != 0
 		then
 			one Underloaded
 		else
