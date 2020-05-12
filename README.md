@@ -10,6 +10,6 @@ REACT allows domain experts to make their systems adaptive in an easy-to-use man
 
 Everything has been executed and tested using Ubuntu 18.04.
 
-### [Full Paper Material](REACT-A_Model-Based_Runtime_Environment_for_Adapting_Communication_Systems/README.md)
+### [Full Paper Material](https://github.com/martinpfannemueller/ACSOS2020-Supplementary-Material/tree/master/REACT-A_Model-Based_Runtime_Environment_for_Adapting_Communication_Systems)
 
-### [Demo Material](Enhancing_a_Communication_System_with_Adaptive_Behavior_using_REACT/README.md)
+### [Demo Material](https://github.com/martinpfannemueller/ACSOS2020-Supplementary-Material/tree/master/Enhancing_a_Communication_System_with_Adaptive_Behavior_using_REACT)
