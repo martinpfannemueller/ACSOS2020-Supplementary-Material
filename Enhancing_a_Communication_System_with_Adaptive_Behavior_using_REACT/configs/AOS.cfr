@@ -21,7 +21,7 @@ Status 1..1
 		else
 			no ExtraServers
 
-	if Status.averageUtilization.dref < 30
+	if Status.averageUtilization.dref < 30 && Status.averageUtilization != 0
 		then
 			one Underloaded
 		else
@@ -33,7 +33,7 @@ Status 1..1
 		else
 			no ServerLauncher
 
-	if Underloaded && activeServers > 1
+	if Underloaded && Manager.activeServers > 1
 		then
 			one ServerRemover
 		else
