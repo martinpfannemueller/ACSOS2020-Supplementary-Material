@@ -1,6 +1,6 @@
 # Enhancing a Communication System with Adaptive Behavior using REACT
 
-This folder contains supplementary material of the ACSOS 2020 demo paper submission presenting REACT. The demo will show how to enhance the exisiting system [SWIM](https://github.com/cps-sei/swim) with adaptive behavior using REACT. This follows the development process specified in the full paper shown below.
+This folder contains supplementary material of the ACSOS 2020 demo paper submission presenting REACT. The demo will show how to enhance the exisiting system [SWIM](https://github.com/cps-sei/swim) with adaptive behavior using REACT. This follows the development process shown below which is specified in detail as part of the full paper.
 
 ![Development process of REACT](../figures/dev_process.png)
 
