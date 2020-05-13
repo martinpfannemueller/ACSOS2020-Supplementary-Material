@@ -4,7 +4,7 @@ This folder contains supplementary material of the ACSOS 2020 demo paper submiss
 
 ![Development process of REACT](../figures/dev_process.png)
 
-The Adaptation Options Specification (AOS) and Target System Specification (TSS) can be found in the `configs` folder. For connecting REACT to SWIM, the folder Python-Interface containts the intermediate layer implementing REACT's interfaces and connecting to the socket provided by SWIM. Finally, `configs` contains all key-value-based configuration files for running REACT.
+The Adaptation Options Specification (AOS) and Target System Specification (TSS) can be found in the `configs` folder. For connecting REACT to SWIM, the folder Python-Interface contains the intermediate layer implementing REACT's interfaces and connecting to the socket provided by SWIM. Finally, `configs` contains all key-value-based configuration files for running REACT.
 
 ## Running the example
 
@@ -20,7 +20,7 @@ In a second shell, start the SWIM container:
 
 `docker run -d -p 5901:5901 -p 6901:6901 -p 4242:4242 --name swim gabrielmoreno/swim`
 
-and use the `startStim.sh` script for starting SWIM:
+and use the `startSwim.sh` script for starting SWIM:
 
 `docker cp startSwim.sh swim:/headless/startSwim.sh && docker exec swim /bin/sh -c "chmod +x /headless/startSwim.sh" && docker exec swim /bin/sh -c /headless/startSwim.sh`
 
