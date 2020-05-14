@@ -10,7 +10,7 @@ Status 1..1
 
 [ if Manager.responseTime >= 75 then one HighRT else no HighRT
   if Manager.activeServers < Manager.maxServers then one ExtraServers else no ExtraServers
-  if Status.averageUtilization.dref < 30 && Status.averageUtilization != 0 then one Underloaded else no Underloaded
+  if Status.averageUtilization < 30 && Status.averageUtilization != 0 then one Underloaded else no Underloaded
   if HighRT && ExtraServers then one ServerLauncher else no ServerLauncher
   if Underloaded && Manager.activeServers > 1 then one ServerRemover else no ServerRemover ]
 
