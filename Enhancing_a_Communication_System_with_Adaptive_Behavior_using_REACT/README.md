@@ -10,7 +10,9 @@ The Adaptation Options Specification (AOS) and Target System Specification (TSS)
 
 ## Running the example
 
-For running the example on an Ubuntu machine setup your Python 3 environment by installing the ZeroC-Ice Python dependency:
+For running the example on an Ubuntu machine setup your Python 3 environment by installing the ZeroC-Ice Python dependency. For building the ZeroC Ice Python package dependency you need gcc and some development headers. On Ubuntu you need to run `sudo apt-get install build-essential libssl-dev libbz2-dev`
+
+Then you can install the Python dependency:
 
 `pip install -r Python-Interface/requirements.txt`
 
