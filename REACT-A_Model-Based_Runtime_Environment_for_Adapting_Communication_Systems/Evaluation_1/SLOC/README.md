@@ -49,21 +49,86 @@ SUM:                             4             81             28            425
 
 #### Table III
 
+
+#### Probes
+
 ```
-cloc --force-lang-def=cloc_language_definitions Rainbow/system/
-       9 text files.
-       9 unique files.
+cloc --force-lang-def=cloc_language_definitions Rainbow/system/probes
+       2 text files.
+       2 unique files.
        0 files ignored.
 
-github.com/AlDanial/cloc v 1.84  T=0.02 s (435.0 files/s, 13051.0 lines/s)
+github.com/AlDanial/cloc v 1.84  T=0.02 s (105.5 files/s, 7012.9 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-YAML                             2              7              3             93
 Perl                             2             28             14             91
-Bourne Shell                     5             10              4             20
 -------------------------------------------------------------------------------
-SUM:                             9             45             21            204
+SUM:                             2             28             14             91
+-------------------------------------------------------------------------------
+```
+
+```
+cloc --force-lang-def=cloc_language_definitions Rainbow/system/probes.yml
+       1 text file.
+       1 unique file.
+       0 files ignored.
+
+github.com/AlDanial/cloc v 1.84  T=0.01 s (95.1 files/s, 6752.9 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+YAML                             1              3              0             68
+-------------------------------------------------------------------------------
+```
+
+#### Effectors
+
+```
+cloc --force-lang-def=cloc_language_definitions Rainbow/system/effectors
+       3 text files.
+       3 unique files.
+       0 files ignored.
+
+github.com/AlDanial/cloc v 1.84  T=0.02 s (182.4 files/s, 912.1 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Bourne Shell                     3              6              0              9
+-------------------------------------------------------------------------------
+SUM:                             3              6              0              9
+-------------------------------------------------------------------------------
+```
+
+```
+cloc --force-lang-def=cloc_language_definitions Rainbow/system/effectors.yml
+       1 text file.
+       1 unique file.
+       0 files ignored.
+
+github.com/AlDanial/cloc v 1.84  T=0.01 s (91.3 files/s, 2921.8 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+YAML                             1              4              3             25
+-------------------------------------------------------------------------------
+```
+
+#### Utility Files
+
+```
+cloc --force-lang-def=cloc_language_definitions Rainbow/system/util/
+       2 text files.
+       2 unique files.
+       0 files ignored.
+
+github.com/AlDanial/cloc v 1.84  T=0.01 s (157.2 files/s, 1493.1 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Bourne Shell                     2              4              4             11
+-------------------------------------------------------------------------------
+SUM:                             2              4              4             11
 -------------------------------------------------------------------------------
 ```
 
